@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analytics tool — Mexcee</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <header class="haut">
+    <a class="logo" href="./"><svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#6b3fd4"/><path d="M8 22V10l8 7 8-7v12" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Mexcee</a>
+    <nav><a href="./">Accueil</a><a href="outil.html" aria-current="page">Outil d'analyse</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  </header>
+</div>
+<main class="doc">
+  <h1>Mexcee analytics tool</h1>
+  <p class="maj">A private, self-hosted tool used only by Mexcee for Mexcee's own accounts.</p>
+
+  <h2>What it does</h2>
+  <p>Mexcee publishes music-production videos on TikTok (@mexcee.ld) and YouTube (@Max_ldll). To improve them, a private tool running on Mexcee's own computer collects the performance statistics of these two accounts and produces a weekly report: which videos keep viewers' attention, where viewers stop watching, and which formats (explanation, practice, demonstration) work best.</p>
+
+  <h2>Who uses it</h2>
+  <p>Only the account owner. The tool has no other users, no public sign-up, and is not offered as a service to anyone else. It only accesses an account after the owner has signed in and approved access on TikTok's or Google's own authorization pages.</p>
+
+  <h2>Data used</h2>
+  <table>
+    <tr><th>Platform</th><th>Data (owner's own account only)</th><th>Purpose</th></tr>
+    <tr><td>TikTok (API for Business, Accounts API)</td><td>Account identifier; list of the owner's videos; per video: views, likes, comments, shares, saves, reach, average watch time, completion rate, retention by second, traffic sources, new followers</td><td>Weekly performance report for the owner</td></tr>
+    <tr><td>YouTube (Data API, Analytics API)</td><td>List of the owner's videos; views, likes, comments, watch time, average percentage viewed, retention curve, traffic sources</td><td>Weekly performance report for the owner</td></tr>
+  </table>
+  <p>The tool only reads data. It does not publish, modify or delete anything through these analytics integrations, and it does not access data about other creators or viewers beyond the aggregated statistics provided by the platforms.</p>
+
+  <h2>Where data is stored</h2>
+  <p>On the owner's own computer (local files and a self-hosted automation server). Data is not sold, not shared with advertisers and not used for advertising. See the <a href="privacy.html">Privacy Policy</a> for the full details, including the one external service used to write the weekly report.</p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:contact@mexcee.fr">contact@mexcee.fr</a></p>
+
+  <span class="langue" lang="fr">FRANÇAIS</span>
+  <div lang="fr">
+    <h2>L'outil d'analyse de Mexcee</h2>
+    <p>Un outil privé, installé sur l'ordinateur de Mexcee, lit les statistiques de ses propres comptes TikTok et YouTube (vues, temps de visionnage, rétention, sources de trafic) après autorisation sur les pages officielles de TikTok et de Google, et en tire un rapport hebdomadaire pour améliorer les vidéos. Il n'a pas d'autres utilisateurs, ne publie rien et ne lit aucune donnée d'autres comptes. Les données restent sur l'ordinateur de Mexcee ; elles ne sont ni vendues ni utilisées pour la publicité. Détails : <a href="privacy.html">politique de confidentialité</a>.</p>
+  </div>
+</main>
+<div class="page">
+  <footer class="bas">
+    <span>© 2026 Mexcee</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="mentions-legales.html">Mentions légales</a></span>
+  </footer>
+</div>
+</body>
+</html>

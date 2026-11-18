@@ -1,0 +1,53 @@
+:root {
+  --fond: #f7f5f0; --carte: #ffffff; --texte: #1b1a1f; --doux: #5f5d66; --trait: #e5e1d8;
+  --accent: #6b3fd4; --accent-2: #e2725b; --code: #f0ede6;
+  --ombre: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fond: #121116; --carte: #1b1a21; --texte: #ecebf0; --doux: #a3a1ad; --trait: #2c2a33;
+    --accent: #a98bff; --accent-2: #ff9a82; --code: #24222b; --ombre: 0 1px 2px rgba(0,0,0,.35);
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fond); color: var(--texte); font: 17px/1.65 "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
+a { color: var(--accent); text-underline-offset: 3px; }
+.page { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+header.haut { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; flex-wrap: wrap; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 20px; letter-spacing: .02em; color: var(--texte); text-decoration: none; }
+.logo svg { width: 30px; height: 30px; }
+nav a { color: var(--doux); text-decoration: none; margin-left: 18px; font-size: 15px; }
+nav a:hover, nav a[aria-current] { color: var(--texte); }
+.hero { padding: 56px 0 40px; }
+.hero h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.08; margin: 0 0 18px; letter-spacing: -.02em; }
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--accent), var(--accent-2)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.hero p.chapo { font-size: 20px; color: var(--doux); max-width: 680px; margin: 0 0 28px; }
+.boutons { display: flex; gap: 12px; flex-wrap: wrap; }
+.bouton { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font-weight: 600; text-decoration: none; border: 1px solid var(--trait); color: var(--texte); background: var(--carte); }
+.bouton.plein { background: var(--texte); color: var(--fond); border-color: var(--texte); }
+section { padding: 36px 0; border-top: 1px solid var(--trait); }
+section h2 { font-size: 28px; margin: 0 0 8px; letter-spacing: -.01em; }
+section p.intro { color: var(--doux); margin: 0 0 24px; max-width: 720px; }
+.grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.carte { background: var(--carte); border: 1px solid var(--trait); border-radius: 16px; padding: 18px 20px; box-shadow: var(--ombre); }
+.carte h3 { margin: 0 0 6px; font-size: 18px; }
+.carte p { margin: 0; color: var(--doux); font-size: 15.5px; }
+.carte .tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; }
+.themes { display: flex; flex-wrap: wrap; gap: 8px; }
+.themes span { padding: 7px 14px; border-radius: 999px; background: var(--carte); border: 1px solid var(--trait); font-size: 15px; }
+.anglais { background: var(--code); border-radius: 16px; padding: 20px 22px; }
+.anglais h2 { font-size: 20px; }
+main.doc { max-width: 760px; margin: 0 auto; padding: 24px 20px 60px; }
+main.doc h1 { font-size: 34px; line-height: 1.15; margin: 10px 0 6px; }
+main.doc h2 { font-size: 22px; margin: 34px 0 8px; }
+main.doc h3 { font-size: 18px; margin: 22px 0 6px; }
+main.doc .maj { color: var(--doux); font-size: 14px; }
+main.doc .langue { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: .08em; color: var(--accent); border: 1px solid var(--trait); border-radius: 6px; padding: 2px 8px; margin-top: 30px; }
+main.doc hr { border: 0; border-top: 1px solid var(--trait); margin: 40px 0; }
+table { border-collapse: collapse; width: 100%; font-size: 15px; }
+th, td { text-align: left; border-bottom: 1px solid var(--trait); padding: 8px 6px; vertical-align: top; }
+footer.bas { border-top: 1px solid var(--trait); padding: 26px 0 40px; color: var(--doux); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: space-between; }
+footer.bas a { color: var(--doux); }
+pre.code { white-space: pre-wrap; word-break: break-all; padding: 12px; border: 1px solid var(--trait); border-radius: 8px; background: var(--code); }
+@media (max-width: 640px) { nav a { margin: 0 14px 0 0; } .hero { padding: 30px 0 24px; } body { font-size: 16px; } }
